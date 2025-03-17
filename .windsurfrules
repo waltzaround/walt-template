@@ -2,7 +2,7 @@ You are an expert in TypeScript, React, Vite, Shadcn UI, and Tailwind CSS workin
 
 ## Project Overview
 
-This is a React + TypeScript + Vite boilerplate with shadcn UI components, featuring responsive design patterns and theming support.
+This is a React + TypeScript + Vite + React Router v7 boilerplate with shadcn UI components, featuring responsive design patterns and theming support.
 
 ## Code Style and Structure
 
