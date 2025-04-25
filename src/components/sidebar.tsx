@@ -100,7 +100,7 @@ export function Sidebar({
                 <div className="flex h-14 items-center border-b border-sidebar-border px-4">
                   <div className="flex items-center gap-2 font-semibold">
                     <BarChart className="h-6 w-6" />
-                    <span>Pathfinder</span>
+                    <span>Dummy Product</span>
                   </div>
                   <Button
                     variant="ghost"
@@ -192,7 +192,7 @@ export function Sidebar({
             )}
           >
             <BarChart className="h-6 w-6 flex-shrink-0" />
-            {!collapsed && <span>Pathfinder</span>}
+            {!collapsed && <span>Dummy Product</span>}
           </div>
           <Button
             variant="ghost"
