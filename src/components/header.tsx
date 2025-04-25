@@ -1,14 +1,16 @@
-import { Bell, User } from "lucide-react"
+import { Bell, User, Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
-  title?: string
+  title?: string;
+  onMobileMenuClick?: () => void;
 }
 
 export function Header({ 
   className, 
   title = "Dashboard",
+  onMobileMenuClick,
   ...props 
 }: HeaderProps) {
   return (
@@ -20,6 +22,17 @@ export function Header({
       {...props}
     >
       <div className="flex flex-1 items-center gap-2">
+        {onMobileMenuClick && (
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="md:hidden mobile-menu-button mr-2" 
+            onClick={onMobileMenuClick}
+          >
+            <Menu className="h-5 w-5" />
+            <span className="sr-only">Toggle Menu</span>
+          </Button>
+        )}
         <h1 className="text-lg font-semibold">{title}</h1>
       </div>
       <div className="flex items-center gap-2">

@@ -1,7 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.tsx'
+import Login from './Login.tsx'
 
 // Force dark mode regardless of user's system preference
 document.documentElement.classList.add('dark')
@@ -17,8 +19,21 @@ window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', fo
 // Initial call to force dark mode
 forceDarkMode()
 
+// Create router with React Router v7
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Login />,
+
+  },
+  {
+    path: '/home',
+    element: <App />,
+  },
+])
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
