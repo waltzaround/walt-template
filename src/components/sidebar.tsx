@@ -256,7 +256,7 @@ export function Sidebar({
           
           {!collapsed && (
             <h2 className="mb-2 px-7 text-xs font-semibold tracking-tight mt-4">
-              Investments
+              Submenu Name
             </h2>
           )}
           <div className="px-3 py-2">
